@@ -1,0 +1,22 @@
+<h2>Aufgabe 8</h2>
+
+<table>
+  <thead>
+  <tr>
+    <th>Autor</th>
+    <th>Titel</th>
+    <th>ISBN</th>
+  </tr>
+  </thead>
+  <tr *ngFor="let book of getBooks()">
+    <td>
+      <a [routerLink]="['/books', book.isbn]">{{book.author}}</a>
+    </td>
+    <td>
+      {{book.title}}
+    </td>
+    <td>
+      {{book.isbn}}
+    </td>
+  </tr>
+</table>

@@ -10,6 +10,8 @@ import { TitleInputComponent } from './title-input/title-input.component';
 import { BookListComponent } from './book-list/book-list.component';
 import { Routing } from "./shared/app.routing";
 import { BookDetailComponent } from './book-detail/book-detail.component';
+import { ShoutPipe } from './shared/shout.pipe';
+import { TooltipDirective } from './shared/tooltip.directive';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { BookDetailComponent } from './book-detail/book-detail.component';
     MouseCursorComponent,
     TitleInputComponent,
     BookListComponent,
-    BookDetailComponent
+    BookDetailComponent,
+    ShoutPipe,
+    TooltipDirective
   ],
   imports: [
     BrowserModule,

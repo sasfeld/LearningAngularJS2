@@ -10,26 +10,21 @@ import {Observable, Subscription} from "rxjs";
   providers: [BookDataService]
 })
 export class BookListComponent implements OnInit, OnDestroy {
-  private books: Book[];
-  private bookdataSubscription: Subscription;
+  private books: Observable<Book[]>;
 
   constructor(private bookDataService: BookDataService) {
   }
 
   ngOnInit() {
     console.log("BookListComponent#ngOnInit");
-    this.bookdataSubscription = this.bookDataService.getBooks()
-      .subscribe((books) => {
-        this.books = books;
-      });
+    this.books = this.bookDataService.getBooks();
   }
 
   ngOnDestroy(): void {
     console.log("BookListComponent#ngOnDestroy");
-    this.bookdataSubscription.unsubscribe();
   }
 
-  getBooks(): Book[] {
+  getBooks(): Observable<Book[]> {
     return this.books;
   }
 

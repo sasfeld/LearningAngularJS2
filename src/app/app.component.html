@@ -1,7 +1,11 @@
+<h2>Trumpify-Pipe</h2>
+<p>{{ "Make America great again!" | trumpify }}</p>
+<p>{{ undefined | trumpify }}</p>
+
+<p tooltip="Test-Value">Test-Tooltip</p>
 
 <router-outlet></router-outlet>
 
-<!--
 <div>
   <h1>
     {{title}}
@@ -23,4 +27,3 @@
 
 <button (click)="showBookList = !showBookList">Toggle Booklist</button>
 <app-book-list *ngIf="showBookList"></app-book-list>
--->

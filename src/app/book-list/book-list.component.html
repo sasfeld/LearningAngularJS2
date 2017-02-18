@@ -8,7 +8,7 @@
     <th>ISBN</th>
   </tr>
   </thead>
-  <tr *ngFor="let book of getBooks()">
+  <tr *ngFor="let book of getBooks() | async">
     <td>
       <a [routerLink]="['/books', book.isbn]">{{book.author}}</a>
     </td>
